@@ -1,17 +1,46 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Binary
 {
-    class Program
+    class Node
     {
-        static void Main(string[] args)
+        int key;
+        public Node left;
+        public Node right;
+
+        public Node(int item)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            key = item;
+            left = right = null;
         }
     }
+    
+    class BinaryTree
+    {
+        Node root;
+        
+        BinaryTree(int key)
+        {
+            root = new Node(key);
+        }
+
+        BinaryTree()
+        {
+            root = null;
+        }
+
+        public static void Main(String[] args)
+        {
+            BinaryTree tree = new BinaryTree();
+            
+            tree.root = new Node(1);         
+
+            tree.root.left = new Node(2);
+            tree.root.right = new Node(3);          
+
+            tree.root.left.left = new Node(4);
+            
+        }
+    }
+
 }
