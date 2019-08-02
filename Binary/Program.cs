@@ -39,6 +39,7 @@ namespace Binary
             tree.root.right = new Node(3);          
 
             tree.root.left.left = new Node(4);
+
             
         }
     }
